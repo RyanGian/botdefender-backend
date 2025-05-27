@@ -45,9 +45,7 @@ app.post("/attack", async (req, res) => {
 
       if (userData.banned) {
         // User is banned, return a message to the frontend
-        return res
-          .status(403)
-          .json({ message: "You are banned and cannot make requests." });
+        return res.status(403).send("You are banned and cannot make requests.");
       }
 
       const userRef = userDoc.ref;
