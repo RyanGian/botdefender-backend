@@ -4,9 +4,9 @@ const PORT = 8080;
 
 const admin = require("firebase-admin");
 const bodyParser = require("body-parser");
-const cors = require("cors"); // ✅ import cors
+const cors = require("cors");
 
-app.use(cors({ origin: "http://localhost:5173" })); // allow frontend dev server
+app.use(cors({ origin: "http://localhost:5173" }));
 app.use(express.json());
 
 const serviceAccount = require("./firebaseAdminConfig.json");
